@@ -17,3 +17,17 @@ describe("Greeter", function () {
     expect(await greeter.greet()).to.equal("Hola, mundo!");
   });
 });
+
+describe("StupidCalculator", () => {
+  it("Get the contract :P", async () => {
+  });
+
+  it("Provide totalAmount", async () => {
+  });
+
+  it("Can add a number to totalAmount", async () => {
+  });
+
+  it("Can add and subtract", async () => {
+  });
+});
