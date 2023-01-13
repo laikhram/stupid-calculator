@@ -47,3 +47,17 @@ describe("StupidCalculator", () => {
     expect(await StupidCalculatorContract.totalAmount()).to.equal(3);
   });
 });
+
+describe("SmarterStupidCalculator", async () => {
+  it("Provide totalAmount of first signer", async () => {
+  });
+
+  it("Add number 10 to owner and 20 to first singer", async () => {
+  });
+
+  it("Subtract number of first singer", async () => {
+  });
+
+  it("Check amout of each address", async () => {
+  });
+});
