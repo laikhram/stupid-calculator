@@ -20,14 +20,30 @@ describe("Greeter", function () {
 
 describe("StupidCalculator", () => {
   it("Get the contract :P", async () => {
+    const StupidCalculator = await ethers.getContractFactory("StupidCalculator");
   });
 
   it("Provide totalAmount", async () => {
+    const StupidCalculator = await ethers.getContractFactory("StupidCalculator");
+    const StupidCalculatorContract = await StupidCalculator.deploy();
+
+    expect(await StupidCalculatorContract.totalAmount()).to.equal(0);
   });
 
   it("Can add a number to totalAmount", async () => {
+    const StupidCalculator = await ethers.getContractFactory("StupidCalculator");
+    const StupidCalculatorContract = await StupidCalculator.deploy();
+
+    await StupidCalculatorContract.add(10);
+    expect(await StupidCalculatorContract.totalAmount()).to.equal(10);
   });
 
   it("Can add and subtract", async () => {
+    const StupidCalculator = await ethers.getContractFactory("StupidCalculator");
+    const StupidCalculatorContract = await StupidCalculator.deploy();
+
+    await StupidCalculatorContract.add(10);
+    await StupidCalculatorContract.subtract(7);
+    expect(await StupidCalculatorContract.totalAmount()).to.equal(3);
   });
 });
